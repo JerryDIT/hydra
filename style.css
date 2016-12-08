@@ -1,26 +1,150 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Contrail+One|Crete+Round:400,400i|Domine:400,700|Inknut+Antiqua:300,400,500,600,700,800,900|Kreon:300,400,700|Playfair+Display:400,400i,700,700i,900,900i|Quantico:400,400i,700,700i|Signika+Negative:300,400,600,700|Unica+One');
 
-/*nav-barre*/
+/*nav-barre
 * {
-  box-sizing: border-box; /* pour maîtriser width et flex-basis */
+  box-sizing: border-box; /* pour maîtriser width et flex-basis *
+}*/
+:root {
+  --highlight1: #FF9933;
+  --highlight2: #FFF734;
+  --highlight3: #24C8F5;
+  --highlight4: #48D450;
+  --white: white;
+  --grey1: #333333;
 }
-html {
-  display: flex; flex-direction: column; /* correction bug IE de min-height non appliqué à body */
-}
+
 body {
-    background-image: url("1.svg");
-    background-size: 80vw;
-    background-position: center;
+    background-color: var(--highlight1);
     z-index: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
     margin: auto;
-    background-color: #ff9933;
-    background-repeat: no-repeat;
-    flex-direction: column;
+}
+a:link {
+  color: unset;
+  text-decoration: none;
+}
+a:hover {
+  color: unset;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+  padding: 90 70 20 70;
+  margin-top: 20px;
+  font-family: 'Inknut Antiqua', serif;
+  line-height:50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--grey1);
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.logo-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 66px;
+  margin-top: 60px;
+}
+.footer-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  width: 100%;
+  bottom: 0px;
+  z-index: 100;
+  background-color: var(--white);
+  position: fixed;
+  margin: auto;
+  font-family: 'Inknut Antiqua', serif;
+  line-height:27px;
+  color: var(--grey1);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer-button {
+  cursor: pointer;
+  background-color: unset;
+  border: none;
+  max-width: 100%;
+  padding: 10 10 10 10;
+}
+.footer-button:hover {
+    background-color: var(--highlight1);
+    color: var(--white);
+    max-width: 100%;
+    flex-basis: 1;
+}
+.footer-2 {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: flex-end;*/
+  overflow: auto;
+  width: 100%;
+  background-color: var(--white);
+  bottom: 42px;
+  z-index: 100;
+  align-items: center;
+  position: fixed;
+  margin: auto;
+  font-family: Roboto Mono;
+}
+.button-box {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  background-color: var(--white);
+  margin: 10 10 10 10;
+  padding: 10 10 10 10;
+  font-size: 39px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--grey1);
+}
+.button-box:hover {
+  background-color: var(--highlight1);
+  color: var(--white);
+}
+.button-box-small {
+  cursor: pointer;
+  margin: 10 10 10 10;
+  padding: 10 10 10 10;
+}
+.button-box-small:hover {
+  background-color: var(--white);
+  max-width: 100%;
+  flex-basis: 1;
 }
 .cat {
     text-align: center;
@@ -45,11 +169,12 @@ body {
 .tableau {
     z-index: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    align-content: space-around;
-    position:
+    align-content: stretch;
+    position: absolute;
     margin: auto;
+    width: 100%;
 }
